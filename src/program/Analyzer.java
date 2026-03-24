@@ -6,6 +6,7 @@ public class Analyzer {
     Scanner in = new Scanner(System.in);
     int number = in.nextInt();
 
+
     public void evenOrNot() {
         if (number % 2 == 0) {
             System.out.println("Число: " + number + " - чётное.");
@@ -49,6 +50,17 @@ public class Analyzer {
             System.out.println(number + " * " + i + " = " + result);
         }
     }
+
+    public void factorial() {
+        int result = 1;
+        if (number >= 0 && number <= 12) {
+            for (int i = 1; i <= number; i++) {
+                result *= i;
+
+            }
+        }
+        System.out.println("\nФакториал числа: " + number + " = " + (result));
+    }
 }
 
 class ProgramTest {
@@ -60,5 +72,6 @@ class ProgramTest {
         program.howManyNumbers();
         program.sumRange();
         program.multiplication();
+        program.factorial();
     }
 }
